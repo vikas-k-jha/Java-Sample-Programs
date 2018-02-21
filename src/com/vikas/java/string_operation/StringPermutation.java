@@ -1,7 +1,3 @@
-/**
- * Example lamda expression 
- * StringPermutation.java
- */
 package com.vikas.java.string_operation;
 
 /**
