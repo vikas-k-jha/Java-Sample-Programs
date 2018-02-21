@@ -2,7 +2,7 @@
  * Example lamda expression 
  * StringPermutation.java
  */
-package com.vikas.java.string_opertion;
+package com.vikas.java.string_operation;
 
 /**
  * <br> Problem Statement :
