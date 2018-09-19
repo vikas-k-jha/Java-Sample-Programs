@@ -16,7 +16,7 @@ public class StringPermutation {
 		permutation(str);
 	}
 
-	public static void permutation(String str) { 
+	private static void permutation(String str) { 
 	    permutation("", str); 
 	}
 
