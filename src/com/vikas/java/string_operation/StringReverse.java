@@ -13,12 +13,16 @@ public class StringReverse {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Reverse of VIKAS :" + stringReverseOption1("VIKAS"));	
-		System.out.println("Reverse of JHA :" + stringReverseOption2("JHA"));	
+		System.out.println("Reverse of VIKAS : " + stringReverseOption1("VIKAS"));	
+		System.out.println("Reverse of JHA : " + stringReverseOption2("JHA"));
+		System.out.println("Reverse of PRANK : " + stringReverseWithRecursion1("PRANK") );
+		System.out.print("Reverse of FRANK : ");
+		stringReverseWithRecursion("", "FRANK");
+		
 	}
 	
 	// 1 - String reverse using stringBuffer
-	private static String stringReverseOption1(String str){
+	private final static String stringReverseOption1(String str){
 		
 		char[] stringToReverse = str.toCharArray();
 		StringBuffer stringBuffer = new StringBuffer();
@@ -29,8 +33,8 @@ public class StringReverse {
 		return stringBuffer.toString();
 	}
 	
-	// 1 - String reverse using divide and swap
-	private static String stringReverseOption2(String str){
+	// 2  - String reverse using divide and swap
+	private final static String stringReverseOption2(String str){
 		
 		char[] stringToReverse = str.toCharArray();	
 		int length = stringToReverse.length;
@@ -44,4 +48,23 @@ public class StringReverse {
 		
 		return String.valueOf(stringToReverse);
 	}
+	
+	// 3 - String reverse recursively 
+    private final static void stringReverseWithRecursion(String reverseString, String str) {
+        
+    	if (str.length() == 0) 
+            System.out.print(reverseString);
+        else {
+        	stringReverseWithRecursion(reverseString + str.charAt(str.length()-1), str.substring(0, str.length()-1));
+        }
+    }
+    
+    // 4 - String reverse recursively 
+	private final static String stringReverseWithRecursion1(String str) {
+
+		if ((str == null) || (str.length() <= 1))
+			return str;
+		return stringReverseWithRecursion1(str.substring(1)) + str.charAt(0);
+	}    
+    
 }
