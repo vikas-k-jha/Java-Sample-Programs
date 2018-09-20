@@ -1,4 +1,4 @@
-package com.vikas.java.string_operation;
+package com.sample.example.string;
 
 /**
  * <br> Problem Statement :

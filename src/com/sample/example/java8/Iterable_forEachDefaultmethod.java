@@ -2,7 +2,7 @@
  * Example 'forEach' method from Iterable interface
  * Iterable_forEachDefaultmethod.java
  */
-package com.vikas.java.java_8;
+package com.sample.example.java8;
 
 import java.util.Arrays;
 import java.util.Iterator;

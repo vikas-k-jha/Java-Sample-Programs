@@ -2,7 +2,7 @@
  * Example lamda expression 
  * LamdaExpressionDemo.java
  */
-package com.vikas.java.java_8;
+package com.sample.example.java8;
 
 interface LamdaExpression {
 	void display();
