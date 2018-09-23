@@ -20,6 +20,10 @@ public class StringPermutation {
 	    permutation("", str); 
 	}
 
+	/**
+	 * @param prefix is a String 
+	 * @param str is a String 
+	 */
 	private static void permutation(String prefix, String str) {
 	    int n = str.length();
 	    if (n == 0) System.out.println(prefix);

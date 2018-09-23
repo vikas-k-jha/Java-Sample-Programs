@@ -9,7 +9,8 @@ package com.sample.example.string;
  * 
  * @author Vikas Jha
  */
-public class PalindromeDemo {
+
+public class StringPalindrome {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -17,6 +18,10 @@ public class PalindromeDemo {
 		System.out.println("Is 'level' palindrome: " + isPalindromeString("level"));
 	}
 	
+	/**
+	 * @param str is a String
+	 * @return boolean
+	 */
 	private static boolean isPalindromeString(String str) {
         if (str == null)
             return false;
