@@ -1,7 +1,9 @@
 package com.sample.example.string;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * <br>
@@ -17,8 +19,13 @@ public class StringDuplicateCharacters {
 
 	public static void main(String[] args) {
 		duplicateCharactersUsingHashMap("Vikaskumarjha");
+		System.out.println("################################");
+		duplicateCharactersUsingStreams("Vikaskumarjha");
 	}
 
+	/*
+	 * find repeated/duplicate characters using collections 
+	 */
 	private static void duplicateCharactersUsingHashMap(String str) {
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		char[] charArray = str.toCharArray();
@@ -32,4 +39,11 @@ public class StringDuplicateCharacters {
 		}
 		
 	}
+	/*
+	 * find repeated/duplicate characters using Java8 
+	 */
+	private static void duplicateCharactersUsingStreams(String str) {
+		Map<String , Long> map =  Arrays.stream(str.split("")).collect(Collectors.groupingBy(c -> c , Collectors.counting()));
+		        map.forEach( (k, v) -> System.out.println(k + " : "+ v));
+	}	
 }
