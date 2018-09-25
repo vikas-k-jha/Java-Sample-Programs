@@ -16,15 +16,19 @@ import java.util.Map;
 public class StringDuplicateCharacters {
 
 	public static void main(String[] args) {
-
+		duplicateCharactersUsingHashMap("Vikaskumarjha");
 	}
 
-	private static void duplicateCharactersWithCollection(String str) {
+	private static void duplicateCharactersUsingHashMap(String str) {
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		char[] charArray = str.toCharArray();
-		
-		for (int i=0; i < str.length()/2; i ++) {
-			map.put(charArray[0], value)
+		int stringLength = str.length();
+		for (int i=0; i < stringLength/2; i ++) {
+			map.put(charArray[i], map.containsKey(charArray[i])? map.get(charArray[i])+1:1);
+			map.put(charArray[stringLength-1-i], map.containsKey(charArray[stringLength-1-i])? map.get(charArray[stringLength-1-i])+1:1);
+		}
+		for (Map.Entry<Character, Integer> entry : map.entrySet()){
+			System.out.println("Key = " + entry.getKey() +  ", Value = " + entry.getValue());
 		}
 		
 	}
