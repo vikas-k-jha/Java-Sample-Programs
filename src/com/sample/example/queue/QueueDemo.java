@@ -1,6 +1,6 @@
 package com.sample.example.queue;
 
-public class QueueMainClass {
+public class QueueDemo {
 	
 	public static void main(String[] args) {
        
